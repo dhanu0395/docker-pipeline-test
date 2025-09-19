@@ -9,7 +9,7 @@ steps:
 
 - task: Docker@2
   inputs:
-    containerRegistry: 'TestingDocker'
+    containerRegistry: 'docker0395'
     repository: 'dhanu0395/amazontomcat12'
     command: 'buildAndPush'
     Dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
