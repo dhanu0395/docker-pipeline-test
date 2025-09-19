@@ -11,18 +11,12 @@ steps:
   inputs:
     containerRegistry: 'TestingDocker'
     repository: 'dhanu0395/amazontomcat12'
-    command: 'build'
+    command: 'buildAndPush'
     Dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
     buildContext: '$(Build.SourcesDirectory)'
-    tags: 'dhanu0395/amazontomcat12'
-
-
-
-- task: Docker@2
-  inputs:
-    containerRegistry: 'TestingDocker'
-    repository: 'dhanu0395/amazontomcat12'
-    command: 'push'
+    tags: |
+      latest
+      $(Build.BuildId)   # optional: unique tag per build
 
 
 
