@@ -9,16 +9,16 @@ steps:
 
 - task: Docker@2
   inputs:
-    containerRegistry: 'Docker Reg'
-    repository: 'amazontomcat'
+    containerRegistry: 'TestingDocker'
+    repository: 'dhanu0395/amazontomcat12'
     command: 'build'
     Dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
     buildContext: '$(Build.SourcesDirectory)'
 
 - task: Docker@2
   inputs:
-    containerRegistry: 'Docker Reg'
-    repository: 'amazontomcat'
+    containerRegistry: 'TestingDocker'
+    repository: 'dhanu0395/amazontomcat12'
     command: 'push'
 
 
