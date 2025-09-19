@@ -16,7 +16,7 @@ steps:
     buildContext: '$(Build.SourcesDirectory)'
     tags: |
       latest
-      $(Build.BuildId)   # optional: unique tag per build
+      $(Build.BuildId)
 
 
 
