@@ -14,6 +14,9 @@ steps:
     command: 'build'
     Dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
     buildContext: '$(Build.SourcesDirectory)'
+    tags: 'dhanu0395/amazontomcat12'
+
+
 
 - task: Docker@2
   inputs:
